@@ -4,8 +4,8 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import MyDatatable from "./components/mydatatable/Mydatatable";
-import MyList from "./pages/mylist/MyList";
+import Mydatatable from "./components/mydatatable/Mydatatable";
+import Mylist from "./pages/mylist/Mylist";
 import Widget from "./components/widget/Widget";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { productInputs, userInputs } from "./formsource"
@@ -35,7 +35,7 @@ function App() {
                 />
             </Route>
             <Route path="categories">
-              <Route index element={<MyList />}></Route>
+              <Route index element={<Mylist />}></Route>
             </Route>
           </Route>
         </Routes>
