@@ -2,7 +2,7 @@ import "./mylist.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Widget from "../../components/widget/Widget";
-import MyDatatable from "../../components/mydatatable/MyDatatable";
+import MyDatatable from "../../components/mydatatable/Mydatatable";
 
 
 const MyList = () => {

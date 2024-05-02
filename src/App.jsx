@@ -4,7 +4,7 @@ import Login from "./pages/login/Login";
 import List from "./pages/list/List";
 import Single from "./pages/single/Single";
 import New from "./pages/new/New";
-import MyDatatable from "./components/mydatatable/MyDatatable";
+import MyDatatable from "./components/mydatatable/Mydatatable";
 import MyList from "./pages/mylist/MyList";
 import Widget from "./components/widget/Widget";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
