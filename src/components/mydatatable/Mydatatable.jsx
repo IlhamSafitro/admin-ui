@@ -15,10 +15,10 @@ const rows = [
   { id: 3, Name: "Cake",  },
   { id: 4, Name: "Pastry",  },
   { id: 5, Name: "Cookie",  },
-  { id: 6, Name: "Fathu",  },
-  { id: 7, Name: "Rizky",  },
-  { id: 8, Name: "Maulana",  },
-  { id: 9, Name: "A11202113689",  },
+  { id: 6, Name: "ilham",  },
+  { id: 7, Name: "Safitro",  },
+  { id: 8, Name: "Alfina",  },
+  { id: 9, Name: "A11202113656",  },
 ];
 
 const actionColumn = [
