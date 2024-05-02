@@ -11,7 +11,7 @@ const Single = () => {
       <div className="singleContainer">
         <Navbar />
         <div className="top">
-          <div className="left"><div className="left">
+          <div className="left">
   <div className="editButton">Edit</div>
   <h1 className="title">Information</h1>
   <div className="item">
@@ -43,20 +43,17 @@ const Single = () => {
     </div>
   </div>
 </div>
-</div>
-          <div className="right"><div className="right">
+          <div className="right">
   <Chart aspect={3 / 1} type="order" />
 </div>
-</div>
         </div>
-        <div className="bottom"><div className="bottom">
+        <div className="bottom">
   <h1 className="title">Last Transactions</h1>
   <List />
-</div>
 </div>
       </div>
     </div>
   );
 };
 
-export default Single;
+export default Single;

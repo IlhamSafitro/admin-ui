@@ -16,7 +16,7 @@ const New = ({ inputs, title }) => {
           <h1>{title}</h1>
         </div>
         <div className="bottom">
-          <div className="left"><div className="left">
+          <div className="left">
   <img
     src={
       file
@@ -25,8 +25,8 @@ const New = ({ inputs, title }) => {
     }
     alt=""
   />
-</div></div>
-          <div className="right"><div className="right">
+</div>
+          <div className="right">
   <form>
     <div className="formInput">
       <label htmlFor="file">
@@ -48,11 +48,11 @@ const New = ({ inputs, title }) => {
     ))}
     <button>Send</button>
   </form>
-</div></div>
+</div>
         </div>
       </div>
     </div>
   );
 };
 
-export default New;
+export default New;

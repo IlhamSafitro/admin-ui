@@ -1,4 +1,4 @@
-import "./datatable.scss";
+import "./mydatatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
 import { Link } from "react-router-dom";
 
@@ -51,10 +51,10 @@ const actionColumn = [
   },
 ];
 
-const Datatable = () => {
+const Mydatatable = () => {
   return (
-    <div className="datatable">
-      <div className="datatableTitle">
+    <div className="mydatatable">
+      <div className="mydatatableTitle">
         Users
         <Link to="/users/new" style={{ textDecoration: "none" }}>
           Add New
@@ -75,4 +75,4 @@ const Datatable = () => {
   );
 };
 
-export default Datatable;
+export default Mydatatable;
