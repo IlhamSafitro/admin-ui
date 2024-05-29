@@ -7,15 +7,25 @@ import New from "./pages/new/New";
 import Mydatatable from "./components/mydatatable/Mydatatable";
 import Mylist from "./pages/mylist/Mylist";
 import Widget from "./components/widget/Widget";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route , Navigate } from "react-router-dom";
 import { productInputs, userInputs } from "./formsource"
 import "./style/dark.scss";
 import { useContext } from "react";
 import { DarkModeContext } from "./context/darkModeContext";
+import { AuthContext } from "./context/AuthContext";
 
 function App() {
   const {darkMode}= useContext(DarkModeContext);
 
+  const { currentUser } = useContext(AuthContext)
+
+  const RequireAuth = ({children}) => {
+    return currentUser ? children : <Navigate to ="/login" />;
+  };
+
+  const NotRequiredAuth = ({children}) => {
+    return currentUser ? <Navigate to ="/login" /> : children;
+  };
 
   return (
     <div className={darkMode ? "app dark" : "app"}>
