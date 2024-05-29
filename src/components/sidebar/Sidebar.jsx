@@ -7,8 +7,11 @@ import LocalGroceryStoreIcon from '@mui/icons-material/LocalGroceryStore';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
 import CategoryIcon from '@mui/icons-material/Category';
-
+import { DarkModeContext } from "../../context/darkModeContext";
+import { useContext } from "react";
 const Sidebar = () => {
+  const {dispatch} = useContext (DarkModeContext);
+
       return ( <div className="sidebar">
       <div className="top">
         <Link to="/">
@@ -60,8 +63,8 @@ const Sidebar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"></div>
-        <div className="colorOption"></div>
+        <div className="colorOption" onClick={()=>dispatch({type:"LIGHT"})}></div>
+        <div className="colorOption" onClick={()=>dispatch({type:"DARK"})}></div>
       </div>
     </div>
   );
