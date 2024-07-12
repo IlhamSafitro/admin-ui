@@ -4,15 +4,15 @@ import Navbar from "../../components/navbar/Navbar";
 import Chart from "../../components/chart/Chart";
 import Datatable from "../../components/datatable/Datatable";
 import { useLocation } from "react-router-dom";
-import {useEffect,useState} from "react";
-import {doc,getDoc} from "firebase/firestore";
-import {db} from "../../firebase";
+import { useEffect, useState } from "react";
+import { doc,getDoc } from "firebase/firestore";
+import { db } from "../../firebase";
 
 const Single = ({columns}) => {
   const location = useLocation();
   const id = location.pathname.split('/')[2];
   const type = location.pathname.split('/')[1];
-  const [data,setData] =useState({});
+  const [data, setData] = useState({});
 
   useEffect(() => {
     const fetchData = async () => {  
@@ -39,6 +39,7 @@ const Single = ({columns}) => {
   const AllKeys = Object.keys(data); 
   const keys = AllKeys.filter(e => e !== 'timeStamp' && e !== 'img' && e !== 'password' && e !== 'displayName' && e !== 'title' && e !== 'detailName')
 
+  
   return (
     <div className="single">
       <Sidebar />
@@ -68,18 +69,19 @@ const Single = ({columns}) => {
 
     </div>
   </div>
-</div>
+</div>    
           <div className="right">
   <Chart aspect={3 / 1} type="order" />
 </div>
         </div>
+        
         <div className="bottom">
   <h1 className="title">Last Transactions</h1>
-  <Datatable columns={columns}/>
+  <Datatable columns={columns} />
 </div>
       </div>
     </div>
   );
 };
 
-export default Single;
+export default Single;
